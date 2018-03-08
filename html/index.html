@@ -14,7 +14,26 @@
                     <div class="jumbotron h1 text-center">
                         ahai网站建设中.....
                     </div>
-
+                    
+                    
+                    <div class="modal fade"  id="mydialog" data-backdrop="static">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                    <div class="modal-title">欢迎你陌生人</div>
+                                    
+                                </div>
+                                <div class="modal-body">
+                                    <div class="h5 text-warning">此刻访问我网站的陌生人相信你也很寂寞吧</div>
+                                </div>
+                                <div class="modal-footer">
+                                    <span class="btn btn-primary" id="btnOk">确定</span>
+                                    <span class="btn btn-danger" data-dismiss="modal">取消</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div style="text-align: center;width:100%;position: fixed;bottom: 0px">
                         <a href="http://www.miitbeian.gov.cn/">湘ICP备18002671号</a>
@@ -24,6 +43,19 @@
             </div>
         </div>
         <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min."></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        $(function(){
+        $("#mydialog").modal("show");//原始对话框
+        $("#btnOk").click(function(){
+        alert("你好我是阿海");
+        $("#mydialog").modal("hide");//隐藏对话框
+        });
+        $("#btnShow").click(function(){
+        $("#mydialog").modal("show");
+        });
+        
+        });
+        </script>
     </body>
 </html>
